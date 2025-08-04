@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulir Pendaftaran Santri - Rumah Tahfidz MULIA</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; background-color: #f9f9f9; }
+    form { background: #e8f5e9; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px #ccc; }
+    label { font-weight: bold; display: block; margin-top: 10px; }
+    input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; }
+    button { background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+    button:hover { background-color: #388e3c; }
+  </style>
+</head>
+<body>
+
+  <h2>Pendaftaran Online</h2>
+  <form action="https://script.google.com/macros/s/AKfycbz9DbdkTGMqQ_AwgSE81tqpVC2Fuj4irlpQscdW2r4Q5wQakEaFtqczCqQDvTMVwOuc/exec" method="POST" onsubmit="submitForm(event)">
+    <label for="nama">Nama Lengkap</label>
+    <input type="text" id="nama" name="nama" required>
+
+    <label for="tgllahir">Tanggal Lahir</label>
+    <input type="date" id="tgllahir" name="tgllahir" required>
+
+    <label for="gender">Jenis Kelamin</label>
+    <select id="gender" name="gender" required>
+      <option value="">-- Pilih --</option>
+      <option value="Laki-laki">Laki-laki</option>
+      <option value="Perempuan">Perempuan</option>
+    </select>
+
+    <label for="ortu">Nama Orang Tua/Wali</label>
+    <input type="text" id="ortu" name="ortu" required>
+
+    <label for="kontak">Nomor HP/WA</label>
+    <input type="tel" id="kontak" name="kontak" required>
+
+    <label for="alamat">Alamat Lengkap</label>
+    <textarea id="alamat" name="alamat" rows="2" required></textarea>
+
+    <button type="submit">Kirim Pendaftaran</button>
+  </form>
+
+  <p>Setelah mendaftar, kami akan menghubungi Anda untuk proses seleksi dan info selanjutnya. Jika ada pertanyaan, silakan hubungi kontak resmi kami.</p>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      const form = e.target;
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form)
+      }).then(() => {
+        alert("Pendaftaran berhasil dikirim.");
+        form.reset();
+      }).catch(err => {
+        alert("Gagal mengirim pendaftaran. Silakan coba lagi.");
+        console.error(err);
+      });
+    }
+  </script>
+
+</body>
+</html>
