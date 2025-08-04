@@ -1,317 +1,306 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumah Tahfidz Mulia Sucinaraja</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Menggunakan font Inter */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Smooth scrolling untuk navigasi */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Custom animation for hero text */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-fade-in-down {
-            animation: fadeInDown 1s ease-out forwards;
-        }
-        .animate-fade-in-up {
-            animation: fadeInUp 1s ease-out forwards;
-            animation-delay: 0.3s; /* Delay for a staggered effect */
-        }
-        /* Simple hover effect for cards */
-        .card-hover-effect {
-            transition: all 0.3s ease;
-        }
-        .card-hover-effect:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rumah Tahfidz Al-Quran MULIA Sucinaraja Garut</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px 10%;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    nav {
+      background-color: #1b5e20;
+      padding: 10px 10%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 40px 10%;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #81c784;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+    ul {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px 10%;
+    }
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .gallery-container img {
+      width: 220px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #81c784;
+      box-shadow: 0 2px 8px #ccc;
+      transition: transform 0.3s;
+    }
+    .gallery-container img:hover {
+      transform: scale(1.05);
+    }
+    form {
+      max-width: 500px;
+      background: #e8f5e9;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px #ccc;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: 600;
+      color: #1b5e20;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0 16px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #388e3c;
+      color: white;
+      padding: 10px 26px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #1b5e20;
+    }
+    .facilities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .facility {
+      background: #c8e6c9;
+      border-radius: 7px;
+      padding: 13px 19px;
+      min-width: 150px;
+      text-align: center;
+    }
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .contact-buttons a {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+    }
+    .map-container {
+      margin-top: 20px;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .gallery-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .gallery-container img {
+        width: 100%;
+        max-width: 380px;
+      }
+      .facilities {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-    <!-- Header / Navbar -->
-    <header class="bg-white shadow-lg fixed w-full z-10">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-3xl font-extrabold text-indigo-700 hover:text-indigo-800 transition duration-300">
-                Rumah Tahfidz Mulia
-            </a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#beranda" class="text-gray-700 hover:text-indigo-600 font-medium text-lg transition duration-300">Beranda</a>
-                <a href="#tentang" class="text-gray-700 hover:text-indigo-600 font-medium text-lg transition duration-300">Tentang Kami</a>
-                <a href="#program" class="text-gray-700 hover:text-indigo-600 font-medium text-lg transition duration-300">Program</a>
-                <a href="#galeri" class="text-gray-700 hover:text-indigo-600 font-medium text-lg transition duration-300">Galeri</a>
-                <a href="#kontak" class="text-gray-700 hover:text-indigo-600 font-medium text-lg transition duration-300">Kontak</a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition duration-300">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-lg">
-            <a href="#beranda" class="block px-6 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition duration-200">Beranda</a>
-            <a href="#tentang" class="block px-6 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition duration-200">Tentang Kami</a>
-            <a href="#program" class="block px-6 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition duration-200">Program</a>
-            <a href="#galeri" class="block px-6 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition duration-200">Galeri</a>
-            <a href="#kontak" class="block px-6 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition duration-200">Kontak</a>
+<body>
+  <header>
+    <h1>Rumah Tahfidz Al-Quran MULIA</h1>
+    <p>Mencetak Generasi Qur'ani yang Mulia dan Berakhlak Karimah</p>
+  </header>
+  <nav>
+    <a href="#Beranda">Beranda</a>
+    <a href="#Tentang">Tentang</a>
+    <a href="#Program">Program</a>
+    <a href="#Metode">Metode Belajar</a>
+    <a href="#Galeri">Galeri</a>
+    <a href="#Fasilitas">Fasilitas</a>
+    <a href="#Pendaftaran">Pendaftaran</a>
+    <a href="#Kontak">Kontak</a>
+  </nav>
+  <main>
+    <section id="Beranda">
+      <h2>Visi & Misi</h2>
+      <p><strong>Visi:</strong><br>
+      Mencetak Generasi Qur'ani yang Mulia, dan Berakhlak Karimah</p>
+      <p><strong>Misi:</strong><br>
+      1. Membimbing Anak Didik dalam Menghafal, Memahami, dan Mengamalkan Al-Quran<br>
+      2. Menanamkan Nilai-Nilai Akhlakul Kharimah<br>
+      3. Membangun Lingkungan Belajar yang Kondusif, dan Penuh Kasih<br>
+      4. Bersinergi dengan Orang Tua Didik dan Masyarakat Sekitar Rumah Tahfidz</p>
+    </section>
+    <section id="Tentang">
+      <h2>Tentang Kami</h2>
+      <p>Awalnya Rumah Tahfidz Mulia dibentuk atas kepedulian tantangan jaman yang serba cepat dan canggih, dimana atas kekhawatiran para orang tua atas pondasi Agama, akhlak, kepribadian dan masa depan anak-anak dilingkungan sekitar. Dengan tujuan yang Mulia untuk menanamkan kecintaan terhadap Al-Quran sejak dini, kami mendirikan Rumah Tahfidz Mulia. Kami berusaha menuju yang terbaik, dengan menghadirkan para pengajar yang terbaik dengan mengkombinasikan metode hafalan dengan pembelajaran tafsir serta penanaman akhlak mulia.</p>
+    </section>
+    <section id="Program">
+      <h2>Program Kami</h2>
+      <ul>
+        <li>Program Tahfidz Al-Quran 1 Juz per 6 bulan</li>
+        <li>Pembelajaran Tafsir dan Tajwid</li>
+        <li>Kegiatan Keagamaan dan Pengembangan Akhlak</li>
+        <li>Mengikutkan Lomba Tahfidz untuk kepercayaan diri</li>
+        <li>Beasiswa untuk Keluarga Miskin & Penghargaan untuk yang Berprestasi</li>
+      </ul>
+    </section>
+    <section id="Metode">
+      <h2>Metode Belajar</h2>
+      <ul>
+        <li>Al-Bagdadiyah</li>
+        <li>Al-Gaza</li>
+        <li>Tahsin Metode Ummi</li>
+        <li>Tajwid Metode Tufatul Atfal</li>
+        <li>Outbond - Memanah</li>
+      </ul>
+    </section>
+    <section id="Galeri">
+      <h2>Galeri Foto Kegiatan</h2>
+      <div class="gallery-container">
+       <div class="image-item">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Kegiatan Tahfidz"> 
+            <p>Kegiatan Tahfidz</p>
         </div>
-    </header>
-
-    <main class="pt-20"> <!-- Padding top untuk menghindari header fixed -->
-
-        <!-- Hero Section -->
-        <section id="beranda" class="relative bg-gradient-to-br from-indigo-700 to-purple-800 text-white py-24 md:py-40 flex items-center justify-center overflow-hidden">
-            <!-- Background pattern (optional) -->
-            <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 0V0h2v34h-2zM0 0h2v36H0V0zm0 38h2V60H0V38zm38 0h2V60h-2V38zM0 36h60v2H0V36zm0 0V0h-2v36h2z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-            
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down drop-shadow-lg">
-                    Selamat Datang di <br> <span class="text-yellow-300">Rumah Tahfidz Mulia Sucinaraja</span>
-                </h1>
-                <p class="text-lg sm:text-xl md:text-2xl mb-10 animate-fade-in-up opacity-90">
-                    Mencetak Generasi Qur'ani yang Berakhlak Mulia dan Berprestasi
-                </p>
-                <a href="#program" class="inline-block bg-white text-indigo-700 hover:bg-indigo-100 px-10 py-4 rounded-full text-xl font-semibold shadow-xl transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300">
-                    Jelajahi Program Kami
-                </a>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="tentang" class="py-16 md:py-28 bg-white">
-            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <!-- Ganti URL placeholder ini dengan URL gambar Rumah Tahfidz Anda yang sebenarnya -->
-                    <img src="https://example.com/your-tahfidz-image.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/D1D5DB/4B5563?text=Gambar+Rumah+Tahfidz';" alt="Gambar Rumah Tahfidz" class="rounded-xl shadow-2xl w-full h-auto object-cover transform hover:scale-102 transition duration-300">
-                </div>
-                <div class="md:w-1/2 text-center md:text-left">
-                    <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">Mengenal Lebih Dekat <br> <span class="text-indigo-600">Rumah Tahfidz Mulia</span></h2>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                        Rumah Tahfidz Mulia Sucinaraja adalah pusat pendidikan Al-Qur'an yang berkomitmen untuk membimbing setiap santri dalam perjalanan menghafal, memahami, dan mengamalkan nilai-nilai luhur Al-Qur'an. Kami percaya bahwa Al-Qur'an adalah fondasi utama dalam membentuk karakter generasi masa depan.
-                    </p>
-                    <p class="text-gray-700 text-lg leading-relaxed">
-                        Dengan kurikulum yang terstruktur, metode pengajaran yang interaktif, dan lingkungan yang islami, kami berupaya melahirkan hafiz dan hafizah yang tidak hanya cemerlang dalam hafalan, tetapi juga memiliki akhlak karimah dan menjadi duta kebaikan di tengah masyarakat.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Programs Section -->
-        <section id="program" class="py-16 md:py-28 bg-indigo-50">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-14">Program Unggulan Kami</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Program Card 1 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Tahfidz Intensif</h3>
-                        <p class="text-gray-600 text-base">Program komprehensif untuk menghafal Al-Qur'an dengan bimbingan personal dan target yang jelas.</p>
-                    </div>
-                    <!-- Program Card 2 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Metode Belajar</h3>
-                        <p class="text-gray-600 text-base">Metode Al-Bagdadiyah</p>
-                        <p class="text-gray-600 text-base">Metode Gaza</p>
-                        <p class="text-gray-600 text-base">Tahsin Metode Ummi</p>
-                        <p class="text-gray-600 text-base">Tajwid Tufatul Atfal</p>
-                    </div>
-                    <!-- Program Card 3 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Kajian Tafsir & Hadits</h3>
-                        <p class="text-gray-600 text-base">Memahami kedalaman makna Al-Qur'an dan Hadits sebagai pedoman hidup.</p>
-                    </div>
-                    <!-- Program Card 4 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Bahasa Arab Dasar</h3>
-                        <p class="text-gray-600 text-base">Mempelajari dasar-dasar bahasa Arab untuk memudahkan pemahaman Al-Qur'an.</p>
-                    </div>
-                    <!-- Program Card 5 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Pembinaan Akhlak</h3>
-                        <p class="text-gray-600 text-base">Membentuk pribadi yang berakhlak mulia sesuai tuntunan Al-Qur'an dan Sunnah.</p>
-                    </div>
-                    <!-- Program Card 6 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Upgrade Skill</h3>
-                        <p class="text-gray-600 text-base">Disertakan Ikut Lomba Tahfidz lokal/umum</p>
-                        <p class="text-gray-600 text-base">Mengikuti Kelas Memanah untuk Konsentrasi</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="galeri" class="py-16 md:py-28 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-14">Moment Indah Kami</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- Ganti URL placeholder ini dengan URL gambar kegiatan Anda yang sebenarnya -->
-                    <div class="rounded-lg overflow-hidden shadow-md card-hover-effect">
-                        <img src="https://example.com/kegiatan-1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/A78BFA/FFFFFF?text=Kegiatan+1';" alt="Kegiatan Mengaji" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="rounded-lg overflow-hidden shadow-md card-hover-effect">
-                        <img src="https://example.com/kegiatan-2.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/818CF8/FFFFFF?text=Kegiatan+2';" alt="Kegiatan Belajar" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="rounded-lg overflow-hidden shadow-md card-hover-effect">
-                        <img src="https://example.com/kegiatan-3.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/6366F1/FFFFFF?text=Kegiatan+3';" alt="Kegiatan Bersama" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="rounded-lg overflow-hidden shadow-md card-hover-effect">
-                        <img src="https://example.com/kegiatan-4.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/4F46E5/FFFFFF?text=Kegiatan+4';" alt="Kegiatan Outdoor" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="rounded-lg overflow-hidden shadow-md card-hover-effect">
-                        <img src="https://example.com/kegiatan-5.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/4338CA/FFFFFF?text=Kegiatan+5';" alt="Kegiatan Hafalan" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="rounded-lg overflow-hidden shadow-md card-hover-effect">
-                        <img src="https://example.com/kegiatan-6.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/3730A3/FFFFFF?text=Kegiatan+6';" alt="Kegiatan Diskusi" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="rounded-lg overflow-hidden shadow-md card-hover-effect">
-                        <img src="https://example.com/kegiatan-7.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/312E81/FFFFFF?text=Kegiatan+7';" alt="Kegiatan Wisuda" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="rounded-lg overflow-hidden shadow-md card-hover-effect">
-                        <img src="https://example.com/kegiatan-8.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/2A247A/FFFFFF?text=Kegiatan+8';" alt="Kegiatan Qurban" class="w-full h-48 object-cover">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="kontak" class="py-16 md:py-28 bg-indigo-50">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-12">Hubungi Kami</h2>
-                <p class="text-gray-700 text-lg mb-10 max-w-3xl mx-auto">
-                    Kami siap menjawab pertanyaan Anda dan menyambut calon santri baru. Jangan ragu untuk menghubungi kami melalui informasi di bawah ini atau mengisi formulir kontak.
-                </p>
-                <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-lg w-full md:w-1/3 flex flex-col items-center justify-center card-hover-effect">
-                        <svg class="w-12 h-12 text-indigo-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        <h3 class="text-xl font-bold text-indigo-700 mb-2">Alamat</h3>
-                        <p class="text-gray-600 text-center">Masjid Nurul Yaqin</p>
-                        <p class="text-gray-600 text-center">Jl. Raya Wanaraja Kampung Mudasari, RT02, RW011 <br>Desa Tegalpanjang, Kec.Sucinaraja, Kab Garut, Jawa Barat</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg w-full md:w-1/3 flex flex-col items-center justify-center card-hover-effect">
-                        <svg class="w-12 h-12 text-indigo-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        <h3 class="text-xl font-bold text-indigo-700 mb-2">Email</h3>
-                        <p class="text-gray-600">RT.Mulia.Sucinaraja@gmail.com</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg w-full md:w-1/3 flex flex-col items-center justify-center card-hover-effect">
-                        <svg class="w-12 h-12 text-indigo-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        <h3 class="text-xl font-bold text-indigo-700 mb-2">Telepon</h3>
-                        <p class="text-gray-600">+62 831-9828-7157 (Ustadz Deni)</p>
-                        <p class="text-gray-600">+62 896-9592-0826 (Ibu Ati)</p>
-                    </div>
-                </div>
-                <!-- Simple Contact Form (optional, can be expanded) -->
-                <div class="mt-16 bg-white p-8 md:p-10 rounded-xl shadow-lg max-w-xl mx-auto card-hover-effect">
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-8">Daftar & Percayakan Putra-Putri Anda Kepada Kami</h3>
-                    <form class="space-y-6">
-                        <div>
-                            <input type="text" placeholder="Nama Lengkap Putra/Putri Anda" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-lg" required>
-                             <input type="text" placeholder="Usia" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-lg" required>
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Alamat" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-lg" required>
-                        </div>
-                        <div>
-                            <textarea placeholder="Tulis Pesan Anda di sini..." rows="6" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-lg" required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-indigo-600 text-white py-4 rounded-lg font-semibold text-xl hover:bg-indigo-700 transition duration-300 shadow-md">Kirim Pesan</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-10 text-center">
-        <div class="container mx-auto px-6">
-            <p class="text-lg">&copy; 2025 Rumah Tahfidz Mulia Sucinaraja. Hak Cipta Dilindungi.</p>
-            <div class="flex justify-center space-x-6 mt-6">
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-2xl">
-                    <!-- Facebook Icon (example using SVG for better control) -->
-                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-2xl">
-                    <!-- Instagram Icon -->
-                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.71.01 3.65.05 1.06.05 1.79.22 2.42.47.67.28 1.25.61 1.81.96.56.35 1.05.74 1.48 1.18.43.43.83.92 1.18 1.48.35.56.68 1.14.96 1.81.25.63.42 1.36.47 2.42.04.94.05 1.22.05 3.65s-.01 2.71-.05 3.65c-.05 1.06-.22 1.79-.47 2.42-.28.67-.61 1.25-.96 1.81-.35.56-.74 1.05-1.18 1.48-.43.43-.92.83-1.48 1.18-.56.35-1.14.68-1.81.96-.63.25-1.36.42-2.42.47-.94.04-1.22.05-3.65.05s-2.71-.01-3.65-.05c-1.06-.05-1.79-.22-2.42-.47-.67-.28-1.25-.61-1.81-.96-.56-.35-1.05-.74-1.48-1.18-.43-.43-.83-.92-1.18-1.48-.35-.56-.68-1.14-.96-1.81-.25-.63-.42-1.36-.47-2.42-.04-.94-.05-1.22-.05-3.65s.01-2.71.05-3.65c.05-1.06.22-1.79.47-2.42.28-.67.61-1.25.96-1.81.35-.56.74-1.05 1.18-1.48.43-.43.92-.83 1.48-1.18.56-.35 1.14-.68 1.81-.96.63-.25 1.36-.42 2.42-.47.94-.04 1.22-.05 3.65-.05zm0 2.13c-2.88 0-3.23.01-4.36.06-1.13.05-1.68.2-2.06.35-.4.16-.73.35-1.06.68-.33.33-.52.66-.68 1.06-.15.38-.3.93-.35 2.06-.05 1.13-.06 1.48-.06 4.36s.01 3.23.06 4.36c.05 1.13.2 1.68.35 2.06.16.4.35.73.68 1.06.33.33.66.52 1.06.68.38.15.93.3 2.06.35 1.13.05 1.48.06 4.36.06s3.23-.01 4.36-.06c1.13-.05 1.68-.2 2.06-.35.4-.16.73-.35 1.06-.68.33-.33.52-.66.68-1.06.15-.38.3-.93.35-2.06.05-1.13.06-1.48.06-4.36s-.01-3.23-.06-4.36c-.05-1.13-.2-1.68-.35-2.06-.16-.4-.35-.73-.68-1.06-.33-.33-.66-.52-1.06-.68-.38-.15-.93-.3-2.06-.35-1.13-.05-1.48-.06-4.36-.06zm0 3.65a5.52 5.52 0 100 11.04 5.52 5.52 0 000-11.04zm0 2.13a3.39 3.39 0 110 6.78 3.39 3.39 0 010-6.78zm7.46-5.83a1.3 1.3 0 100 2.6 1.3 1.3 0 000-2.6z" clip-rule="evenodd" /></svg>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-2xl">
-                    <!-- YouTube Icon -->
-                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6"><path fill-rule="evenodd" d="M19.812 5.462a3.5 3.5 0 0 0-2.35-2.35C15.879 3 12 3 12 3s-3.879 0-5.462.112a3.5 3.5 0 0 0-2.35 2.35C3 7.979 3 12 3 12s0 4.021.112 5.638a3.5 3.5 0 0 0 2.35 2.35C8.121 21 12 21 12 21s3.879 0 5.462-.112a3.5 3.5 0 0 0 2.35-2.35C21 16.021 21 12 21 12s0-4.021-.112-5.638ZM15.75 12l-5.25 3V9l5.25 3Z" clip-rule="evenodd" /></svg>
-                </a>
-            </div>
+        <div class="image-item">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Suasana kelas">
+            <p>Suasana Kelas</p>
         </div>
-    </footer>
+        <div class="image-item">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Santri Belajar">
+            <p>Santri Belajar</p>
+        </div>
+        <div class="image-item">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Kegiatan Outbond">
+            <p>Kegiatan Outbond</p>
+        </div>
+      </div>
+    </section>
+    <section id="Fasilitas">
+      <h2>Fasilitas</h2>
+      <div class="facilities">
+        <div class="facility">Masjid</div>
+        <div class="facility">Ruang Kelas Nyaman</div>
+        <div class="facility">Perpustakaan "Segera"</div>
+      </div>
+    </section>
+    <section id="Pendaftaran">
+      <h2>Pendaftaran Online</h2>
+      <form action="https://script.google.com/macros/s/AKfycbya54nI_3JBRbtWODNIeoTrSUpAhm4Hclam5ARJayY/dev" method="POST">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" required>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-6 right-6 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 hidden">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-        </svg>
-    </button>
+        <label for="tgllahir">Tanggal Lahir</label>
+        <input type="date" id="tgllahir" name="tgllahir" required>
 
-    <script>
-        // JavaScript untuk toggle menu mobile
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        <label for="gender">Jenis Kelamin</label>
+        <select id="gender" name="gender" required>
+          <option value="">-- Pilih --</option>
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        <label for="ortu">Nama Orang Tua/Wali</label>
+        <input type="text" id="ortu" name="ortu" required>
 
-        // Menutup menu mobile saat link diklik
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+        <label for="kontak">Nomor HP/WA</label>
+        <input type="tel" id="kontak" name="kontak" required>
 
-        // JavaScript untuk tombol Back to Top
-        const backToTopButton = document.getElementById('back-to-top');
+        <label for="alamat">Alamat Lengkap</label>
+        <textarea id="alamat" name="alamat" rows="2" required></textarea>
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) { // Tampilkan tombol setelah scroll 300px
-                backToTopButton.classList.remove('hidden');
-            } else {
-                backToTopButton.classList.add('hidden');
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // Efek scroll halus
-            });
-        });
-    </script>
+        <button type="submit">Kirim Pendaftaran</button>
+      </form>
+      <p>Setelah mendaftar, kami akan menghubungi Anda untuk proses seleksi dan info selanjutnya. Jika ada pertanyaan, silakan hubungi kontak resmi kami.</p>
+    </section>
+    <section id="Kontak">
+      <h2>Hubungi Kami</h2>
+      <p>
+    📧 Email: <a href="mailto:rt.mulia.sucinaraja@gmail.com">rt.mulia.sucinaraja@gmail.com</a><br>
+    📞 <a href="tel:+6283198287157">+62 831 9828 7157 - Ustadz Deni</a><br>
+    📞 <a href="tel:+6289695920826">+62 896 9592 0826 - Ibu Ati</a><br>
+    📍 Alamat: Jl. Raya Wanaraja, Kp Mudasari (koropeak) RT02-RW11, Ds Tegalpanjang, Kec Sucinaraja, Kab. Garut
+      </p>
+      <div class="contact-buttons">
+        <a href="https://wa.me/6283198287157" target="_blank">Hubungi Ustadz Deni via WhatsApp</a>
+        <a href="https://wa.me/6289695920826" target="_blank">Hubungi Ibu Ati via WhatsApp</a>
+        <a href="https://maps.app.goo.gl/85UyVQ9kFDQQfMrYA" target="_blank" class="maps-button">📍 Arahkan ke Rumah Tahfidz</a>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63345.998!2d107.9276!3d-7.2055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68b1c2e7f3e3a3%3A0x123456789abcdef!2sSucinaraja%2C%20Garut!5e0!3m2!1sid!2sid!4v1700000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Sekolah Tahfidz Al-Quran MULIA Sucinaraja. Semua hak cipta dilindungi.
+  </footer>
 </body>
 </html>
-
-
