@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rumah Tahfidz Al-Quran MULIA Sucinaraja Garut</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Nunito', sans-serif;
@@ -158,6 +160,24 @@
             text-decoration: none;
             font-weight: bold;
             text-align: center;
+            transition: background-color 0.3s ease; /* Tambahkan transisi */
+        }
+        /* Style khusus untuk tombol Instagram */
+        .contact-buttons .instagram-btn {
+            background-color: #E1306C; /* Warna khas Instagram */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-buttons .instagram-btn:hover {
+            background-color: #C13584; /* Warna hover Instagram */
+        }
+        .contact-buttons .instagram-btn i {
+            margin-right: 8px; /* Jarak antara ikon dan teks */
+        }
+
+        .contact-buttons a:hover {
+            filter: brightness(1.1); /* Efek terang saat hover */
         }
         .map-container {
             margin-top: 20px;
@@ -246,6 +266,9 @@
             .facilities {
                 flex-direction: column;
                 gap: 8px;
+            }
+            .contact-buttons {
+                align-items: stretch; /* Agar tombol mengisi lebar penuh di mobile */
             }
         }
     </style>
@@ -374,7 +397,12 @@
         <section id="Kontak">
             <h2>Hubungi Kami</h2>
             <p>
-                <a href="https://www.threads.com/@rumahtahfidzmulia?xmt=AQF0zOJt3SFwna5hz758DTuDgKUyFDilcsRax53QNa4wGOE"> Instagram</a><br>
+                <!-- Ikon Instagram -->
+                <a href="https://www.threads.com/@rumahtahfidzmulia?xmt=AQF0zOJt3SFwna5hz758DTuDgKUyFDilcsRax53QNa4wGOE" 
+                   target="_blank" 
+                   style="color: #E1306C; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center;">
+                    <i class="fab fa-instagram fa-lg" style="margin-right: 5px;"></i> Instagram
+                </a><br>
                 📧 Email: <a href="mailto:rt.mulia.sucinaraja@gmail.com">rt.mulia.sucinaraja@gmail.com</a><br>
                 📞 <a href="tel:+6283198287157">+62 831 9828 7157 - Ustadz Deni</a><br>
                 📞 <a href="tel:+6289695920826">+62 896 9592 0826 - Ibu Ati</a><br>
@@ -383,7 +411,18 @@
             <div class="contact-buttons">
                 <a href="https://wa.me/6283198287157" target="_blank">Hubungi Ustadz Deni via WhatsApp</a>
                 <a href="https://wa.me/6289695920826" target="_blank">Hubungi Ibu Ati via WhatsApp</a>
-                <a href="https://maps.app.goo.gl/85UyVQ9kFDQQfMrYA" target="_blank" class="maps-button">📍 Klik Disini untuk di Arahkan ke Rumah Tahfidz</a>
+                <!-- Tombol Instagram yang lebih besar -->
+                <a href="https://www.threads.com/@rumahtahfidzmulia?xmt=AQF0zOJt3SFwna5hz758DTuDgKUyFDilcsRax53QNa4wGOE" 
+                   target="_blank" 
+                   class="instagram-btn">
+                    <i class="fab fa-instagram"></i> Kunjungi Instagram Kami
+                </a>
+                <!-- Link Google Maps yang diperbaiki untuk petunjuk arah -->
+                <a href="https://www.google.com/maps/dir/?api=1&destination=-7.291775,107.971261&travelmode=driving" 
+                   target="_blank" 
+                   class="maps-button">
+                    📍 Klik Disini untuk di Arahkan ke Rumah Tahfidz
+                </a>
             </div>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.514436573719!2d107.971261!3d-7.291775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e652a6a6a6a6a6a%3A0x1a1a1a1a1a1a1a1a!2sRumah%20Tahfidz%20Al-Quran%20MULIA!5e0!3m2!1sen!2sid!4v1625072000000!5m2!1sen!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -407,35 +446,4 @@
         // Event listener untuk setiap link di dalam menu
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                nav.classList.remove('nav-active');
-                menuIcon.classList.remove('open');
-            });
-        });
-
-        const form = document.getElementById("formPendaftaran");
-        const status = document.getElementById("statusPendaftaran");
-
-        form.addEventListener("submit", function(e) {
-            e.preventDefault();
-            const data = new FormData(form);
-            fetch("https://script.google.com/macros/s/AKfycbwVxQhpYtmaQTaS1PD8YpZluBg1ZP8CRuZU3lZnTJwKDyCXJ-n59fvKHcGTjMdIzvW6zg/exec", {
-                method: "POST",
-                body: data
-            })
-            .then(response => {
-                if (response.ok) {
-                    status.textContent = "✅ Pendaftaran berhasil dikirim.";
-                    status.style.color = "green";
-                    form.reset();
-                } else {
-                    throw new Error("Gagal mengirim");
-                }
-            })
-            .catch(error => {
-                status.textContent = "❌ Gagal mengirim. Silakan coba lagi.";
-                status.style.color = "red";
-            });
-        });
-    </script>
-</body>
-</html>
+                
