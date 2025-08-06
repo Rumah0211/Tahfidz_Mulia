@@ -21,7 +21,7 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
-            position: relative; /* Penting untuk posisi menu hamburger */
+            position: relative;
         }
         header img {
             width: 100px;
@@ -166,7 +166,7 @@
         /* === CSS Untuk Tampilan Mobile === */
         /* Ikon Menu Hamburger */
         .menu-icon {
-            display: none; /* Sembunyikan secara default */
+            display: none;
             cursor: pointer;
             padding: 10px;
             position: absolute;
@@ -197,26 +197,30 @@
                 flex-direction: column;
             }
             header h1 {
-                font-size: 1.5em; /* Ukuran h1 lebih kecil di mobile */
+                font-size: 1.5em;
             }
             nav {
-                display: none; /* Sembunyikan menu navigasi default pada layar kecil */
-                flex-direction: column; /* Atur menu menjadi vertikal saat dibuka */
-                align-items: flex-start; /* Rata kiri saat vertikal */
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
                 width: 100%;
-                position: absolute; /* Agar bisa di-slide down */
-                top: 100%; /* Sesuaikan dengan tinggi header */
+                /* Mengubah posisi agar menu mengambang di atas konten */
+                position: fixed; /* Membuat menu tetap di posisi layar */
+                top: 0; /* Mulai dari bagian atas layar */
                 left: 0;
-                background-color: #1b5e20;
-                z-index: 10; /* Pastikan di atas konten lain */
-                padding: 0;
+                height: 100vh; /* Menu akan menutupi seluruh layar */
+                background-color: rgba(27, 94, 32, 0.95); /* Warna dengan sedikit transparansi */
+                z-index: 10;
+                padding-top: 100px; /* Jarak dari atas untuk memberi ruang header */
             }
-
+            
             nav a {
                 display: block;
-                padding: 10px 10%;
-                width: 80%; /* Sesuaikan agar full width */
+                padding: 15px 10%; /* Meningkatkan padding agar mudah diklik */
+                width: 80%;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                font-size: 1.1rem; /* Ukuran font lebih kecil */
+                font-weight: 400; /* Font lebih tipis */
             }
 
             nav a:last-child {
@@ -224,11 +228,12 @@
             }
 
             .nav-active {
-                display: flex !important; /* Tampilkan menu saat class 'nav-active' ditambahkan */
+                display: flex !important;
             }
 
             .menu-icon {
-                display: block; /* Tampilkan ikon menu pada layar kecil */
+                display: block;
+                top: 10px; /* Mengatur ulang posisi ikon hamburger */
             }
             
             .gallery-container {
