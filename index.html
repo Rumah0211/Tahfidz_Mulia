@@ -1,392 +1,352 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rumah Tahfidz Al-Quran MULIA Sucinaraja Garut</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Nunito', sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #2e7d32;
-      color: white;
-      padding: 20px 10%;
-      text-align: center;
-      display: flex;
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rumah Tahfidz Al-Quran MULIA Sucinaraja Garut</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 20px 10%;
+            text-align: center;
+            display: flex;
             align-items: center;
             justify-content: center;
             gap: 20px;
-    }
-    header img {
+        }
+        header img {
             width: 100px;
             height: auto;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.8em;
-    }
-        </style>
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        nav {
+            background-color: #1b5e20;
+            padding: 10px 10%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 40px 10%;
+            max-width: 900px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 60px;
+        }
+        h2 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #81c784;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        ul {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 20px 10%;
+        }
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .image-item {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .image-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        form {
+            max-width: 500px;
+            background: #e8f5e9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px #ccc;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: 600;
+            color: #1b5e20;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0 16px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #388e3c;
+            color: white;
+            padding: 10px 26px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #1b5e20;
+        }
+        .facilities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .facility {
+            background: #c8e6c9;
+            border-radius: 7px;
+            padding: 13px 19px;
+            min-width: 150px;
+            text-align: center;
+        }
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .contact-buttons a {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        .map-container {
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            .gallery-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .gallery-container img {
+                width: 100%;
+                max-width: 380px;
+            }
+            .facilities {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Logo%20Tahfidz%20Mulia.jpeg?raw=true" alt="Logo Rumah Tahfidz">
         <h1>Rumah Tahfidz Al-Quran MULIA Sucinarja Garut</h1>
     </header>
-    nav {
-      background-color: #1b5e20;
-      padding: 10px 10%;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 40px 10%;
-      max-width: 900px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 60px;
-    }
-    h2 {
-      color: #2e7d32;
-      margin-bottom: 15px;
-      border-bottom: 3px solid #81c784;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    p {
-      line-height: 1.6;
-      font-size: 1.1rem;
-    }
-    ul {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    footer {
-      background-color: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 20px 10%;
-    }
-    .gallery-container {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center;
-  gap: 20px; /* Jarak antar item */
-  padding: 20px;
-}
+    <nav>
+        <a href="#Beranda">Beranda</a>
+        <a href="#Tentang">Tentang</a>
+        <a href="#Program">Program</a>
+        <a href="#Metode">Metode Belajar</a>
+        <a href="#Galeri">Galeri</a>
+        <a href="#Fasilitas">Fasilitas</a>
+        <a href="#Pendaftaran">Pendaftaran</a>
+        <a href="#Kontak">Kontak</a>
+    </nav>
+    <main>
+        <section id="Beranda">
+            <h2>Visi & Misi</h2>
+            <p><strong>Visi:</strong><br>
+            Mencetak Generasi Qur'ani yang Mulia, dan Berakhlak Karimah</p>
+            <p><strong>Misi:</strong><br>
+            1. Membimbing Anak Didik dalam Menghafal, Memahami, dan Mengamalkan Al-Quran<br>
+            2. Menanamkan Nilai-Nilai Akhlakul Kharimah<br>
+            3. Membangun Lingkungan Belajar yang Kondusif, dan Penuh Kasih<br>
+            4. Bersinergi dengan Orang Tua Didik dan Masyarakat Sekitar Rumah Tahfidz</p>
+        </section>
+        <section id="Tentang">
+            <h2>Tentang Kami</h2>
+            <p>Awalnya Rumah Tahfidz Mulia dibentuk atas kepedulian tantangan jaman yang serba cepat dan canggih, dimana atas kekhawatiran para orang tua atas pondasi Agama, akhlak, kepribadian dan masa depan anak-anak dilingkungan sekitar. Dengan tujuan yang Mulia untuk menanamkan kecintaan terhadap Al-Quran sejak dini, kami mendirikan Rumah Tahfidz Mulia. Kami berusaha menuju yang terbaik, dengan menghadirkan para pengajar yang terbaik dengan mengkombinasikan metode hafalan dengan pembelajaran tafsir serta penanaman akhlak mulia.</p>
+        </section>
+        <section id="Program">
+            <h2>Program Kami</h2>
+            <ul>
+                <li>Program Tahfidz Al-Quran 1 Juz per 6 bulan</li>
+                <li>Pembelajaran Tafsir dan Tajwid</li>
+                <li>Kegiatan Keagamaan dan Pengembangan Akhlak</li>
+                <li>Mengikutkan Lomba Tahfidz untuk kepercayaan diri</li>
+                <li>Beasiswa Santri/Santriwati untuk yang Berprestasi</li>
+            </ul>
+        </section>
+        <section id="Metode">
+            <h2>Metode Belajar</h2>
+            <ul>
+                <li>Al-Bagdadiyah</li>
+                <li>Al-Gaza</li>
+                <li>Tahsin Metode Ummi</li>
+                <li>Tajwid Metode Tufatul Atfal</li>
+                <li>Outbond - Memanah</li>
+            </ul>
+        </section>
+        <section id="Galeri">
+            <h2>Galeri Foto Kegiatan</h2>
+            <div class="gallery-container">
+                <div class="image-item">
+                    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Ruang%20Belajar.jpeg?raw=true" alt="Suasana kelas">
+                    <p>Suasana Kelas</p>
+                </div>
+                <div class="image-item">
+                    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Kelas%20Memanah.jpeg?raw=true" alt="Kelas Memanah">
+                    <p>Kelas Memanah</p>
+                </div>
+                <div class="image-item">
+                    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Setor%20Hafalan%20Putri.jpeg?raw=true" alt="Setoran Hafalan Putri">
+                    <p>Setoran Hafalan Putri</p>
+                </div>
+                <div class="image-item">
+                    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Penghargaan.jpeg?raw=true" alt="Penghargaan Hafalan">
+                    <p>Penghargaan Hafalan</p>
+                </div>
+                <div class="image-item">
+                    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Setor%20Hafalan%20Putra.jpeg?raw=true" alt="Setoran Hafalan Putra">
+                    <p>Setoran Hafalan Putra</p>
+                </div>
+            </div>
+        </section>
+        <section id="Fasilitas">
+            <h2>Fasilitas</h2>
+            <div class="facilities">
+                <div class="facility">Masjid</div>
+                <div class="facility">Ruang Kelas Nyaman</div>
+                <div class="facility">Perpustakaan "Segera"</div>
+            </div>
+        </section>
+        <section id="Pendaftaran">
+            <h2>Pendaftaran Santri Baru</h2>
+            <form id="formPendaftaran">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" required>
+                <label for="tgllahir">Tanggal Lahir</label>
+                <input type="date" id="tgllahir" name="tgllahir" required>
+                <label for="gender">Jenis Kelamin</label>
+                <select id="gender" name="gender" required>
+                    <option value="">-- Pilih --</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+                <label for="ortu">Nama Orang Tua/Wali</label>
+                <input type="text" id="ortu" name="ortu" required>
+                <label for="kontak">Nomor HP/WA</label>
+                <input type="tel" id="kontak" name="kontak" pattern="[0-9]{10,15}" title="Masukkan nomor HP yang benar" required>
+                <label for="alamat">Alamat Lengkap</label>
+                <textarea id="alamat" name="alamat" rows="3" required></textarea>
+                <button type="submit">Kirim Pendaftaran</button>
+                <div id="statusPendaftaran" class="status"></div>
+            </form>
+            <div class="section">
+                <h2>Donasi</h2>
+                <p>Dukung kegiatan Rumah Tahfidz kami dengan sedekah terbaik Anda:</p>
+                <ul>
+                    <li><strong>Bank BCA</strong></li>
+                    <li><strong>No. Rekening:</strong> 4460620231</li>
+                    <li><strong>a.n:</strong> ATI HAYATI Bendahara: Rumah Tahfidz Al-Quran MULIA</li>
+                </ul>
+                <p>Semoga Allah Ta'ala membalas amal jariyah Anda dengan kebaikan yang berlipat ganda.</p>
+            </div>
+        </section>
+        <section id="Kontak">
+            <h2>Hubungi Kami</h2>
+            <p>
+                <a href="https://www.threads.com/@rumahtahfidzmulia?xmt=AQF0zOJt3SFwna5hz758DTuDgKUyFDilcsRax53QNa4wGOE"> Instagram</a><br>
+                📧 Email: <a href="mailto:rt.mulia.sucinaraja@gmail.com">rt.mulia.sucinaraja@gmail.com</a><br>
+                📞 <a href="tel:+6283198287157">+62 831 9828 7157 - Ustadz Deni</a><br>
+                📞 <a href="tel:+6289695920826">+62 896 9592 0826 - Ibu Ati</a><br>
+                📍 Alamat: Jl. Raya Wanaraja, Kp Mudasari (koropeak) RT02-RW11, Ds Tegalpanjang, Kec Sucinaraja, Kab. Garut
+            </p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/6283198287157" target="_blank">Hubungi Ustadz Deni via WhatsApp</a>
+                <a href="https://wa.me/6289695920826" target="_blank">Hubungi Ibu Ati via WhatsApp</a>
+                <a href="https://maps.app.goo.gl/85UyVQ9kFDQQfMrYA" target="_blank" class="maps-button">📍 Klik Disini untuk di Arahkan ke Rumah Tahfidz</a>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.514436573719!2d107.971261!3d-7.291775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e652a6a6a6a6a6a%3A0x1a1a1a1a1a1a1a1a!2sRumah%20Tahfidz%20Al-Quran%20MULIA!5e0!3m2!1sen!2sid!4v1625072000000!5m2!1sen!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        © 2025 Sekolah Tahfidz Al-Quran MULIA Sucinaraja. Semua hak cipta dilindungi.
+    </footer>
+    <script>
+        const form = document.getElementById("formPendaftaran");
+        const status = document.getElementById("statusPendaftaran");
 
-.image-item {
-  text-align: center;
-  border: 1px solid #ddd; /* Garis tepi */
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Ukuran kotak item */
-}
-
-.image-item img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block; /* Menghilangkan spasi di bawah gambar */
-  margin-bottom: 10px;
-}
-    }
-    form {
-      max-width: 500px;
-      background: #e8f5e9;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 8px #ccc;
-      margin-bottom: 20px;
-    }
-    label {
-      font-weight: 600;
-      color: #1b5e20;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 8px;
-      margin: 6px 0 16px 0;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background-color: #388e3c;
-      color: white;
-      padding: 10px 26px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    button:hover {
-      background-color: #1b5e20;
-    }
-    .facilities {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-    .facility {
-      background: #c8e6c9;
-      border-radius: 7px;
-      padding: 13px 19px;
-      min-width: 150px;
-      text-align: center;
-    }
-    .contact-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .contact-buttons a {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      text-align: center;
-    }
-    .map-container {
-      margin-top: 20px;
-    }
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
-      .gallery-container {
-        flex-direction: column;
-        gap: 10px;
-      }
-      .gallery-container img {
-        width: 100%;
-        max-width: 380px;
-      }
-      .facilities {
-        flex-direction: column;
-        gap: 8px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Rumah Tahfidz Al-Quran MULIA</h1>
-    <p>Mencetak Generasi Qur'ani yang Mulia dan Berakhlak Karimah</p>
-  </header>
-  <nav>
-    <a href="#Beranda">Beranda</a>
-    <a href="#Tentang">Tentang</a>
-    <a href="#Program">Program</a>
-    <a href="#Metode">Metode Belajar</a>
-    <a href="#Galeri">Galeri</a>
-    <a href="#Fasilitas">Fasilitas</a>
-    <a href="#Pendaftaran">Pendaftaran</a>
-    <a href="#Kontak">Kontak</a>
-  </nav>
-  <main>
-    <section id="Beranda">
-      <h2>Visi & Misi</h2>
-      <p><strong>Visi:</strong><br>
-      Mencetak Generasi Qur'ani yang Mulia, dan Berakhlak Karimah</p>
-      <p><strong>Misi:</strong><br>
-      1. Membimbing Anak Didik dalam Menghafal, Memahami, dan Mengamalkan Al-Quran<br>
-      2. Menanamkan Nilai-Nilai Akhlakul Kharimah<br>
-      3. Membangun Lingkungan Belajar yang Kondusif, dan Penuh Kasih<br>
-      4. Bersinergi dengan Orang Tua Didik dan Masyarakat Sekitar Rumah Tahfidz</p>
-    </section>
-    <section id="Tentang">
-      <h2>Tentang Kami</h2>
-      <p>Awalnya Rumah Tahfidz Mulia dibentuk atas kepedulian tantangan jaman yang serba cepat dan canggih, dimana atas kekhawatiran para orang tua atas pondasi Agama, akhlak, kepribadian dan masa depan anak-anak dilingkungan sekitar. Dengan tujuan yang Mulia untuk menanamkan kecintaan terhadap Al-Quran sejak dini, kami mendirikan Rumah Tahfidz Mulia. Kami berusaha menuju yang terbaik, dengan menghadirkan para pengajar yang terbaik dengan mengkombinasikan metode hafalan dengan pembelajaran tafsir serta penanaman akhlak mulia.</p>
-    </section>
-    <section id="Program">
-      <h2>Program Kami</h2>
-      <ul>
-        <li>Program Tahfidz Al-Quran 1 Juz per 6 bulan</li>
-        <li>Pembelajaran Tafsir dan Tajwid</li>
-        <li>Kegiatan Keagamaan dan Pengembangan Akhlak</li>
-        <li>Mengikutkan Lomba Tahfidz untuk kepercayaan diri</li>
-        <li>Beasiswa Santri/Santriwati untuk yang Berprestasi</li>
-      </ul>
-    </section>
-    <section id="Metode">
-      <h2>Metode Belajar</h2>
-      <ul>
-        <li>Al-Bagdadiyah</li>
-        <li>Al-Gaza</li>
-        <li>Tahsin Metode Ummi</li>
-        <li>Tajwid Metode Tufatul Atfal</li>
-        <li>Outbond - Memanah</li>
-      </ul>
-    </section>
-    <section id="Galeri">
-      <h2>Galeri Foto Kegiatan</h2>
-
-<div class="gallery-container">
-  <div class="image-item">
-    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Ruang%20Belajar.jpeg?raw=true" alt="Suasana kelas">
-    <p>Suasana Kelas</p>
-  </div>
-  
-  <div class="image-item">
-    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Kelas%20Memanah.jpeg?raw=true" alt="Kelas Memanah">
-    <p>Kelas Memanah</p>
-  </div>
-  
-  <div class="image-item">
-    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Setor%20Hafalan%20Putri.jpeg?raw=true" alt="Setoran Hafalan Putri">
-    <p>Setoran Hafalan Putri</p>
-  </div>
-  
-  <div class="image-item">
-    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Penghargaan.jpeg?raw=true" alt="Penghargaan Hafalan">
-    <p>Penghargaan Hafalan</p>
-  </div>
-  
-  <div class="image-item">
-    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Setor%20Hafalan%20Putra.jpeg?raw=true" alt="Setoran Hafalan Putra">
-    <p>Setoran Hafalan Putra</p>
-  </div>
-</div>
-    </section>
-    <section id="Fasilitas">
-      <h2>Fasilitas</h2>
-      <div class="facilities">
-        <div class="facility">Masjid</div>
-        <div class="facility">Ruang Kelas Nyaman</div>
-        <div class="facility">Perpustakaan "Segera"</div>
-      </div>
-    </section>
-    <section id="Pendaftaran">
-      <h2>Pendaftaran Santri Baru</h2>
-      <form id="formPendaftaran">
-        <label for="nama">Nama Lengkap</label>
-        <input type="text" id="nama" name="nama" required>
-        <label for="tgllahir">Tanggal Lahir</label>
-        <input type="date" id="tgllahir" name="tgllahir" required>
-        <label for="gender">Jenis Kelamin</label>
-        <select id="gender" name="gender" required>
-          <option value="">-- Pilih --</option>
-          <option value="Laki-laki">Laki-laki</option>
-          <option value="Perempuan">Perempuan</option>
-        </select>
-        <label for="ortu">Nama Orang Tua/Wali</label>
-        <input type="text" id="ortu" name="ortu" required>
-        <label for="kontak">Nomor HP/WA</label>
-        <input type="tel" id="kontak" name="kontak" pattern="[0-9]{10,15}" title="Masukkan nomor HP yang benar" required>
-        <label for="alamat">Alamat Lengkap</label>
-        <textarea id="alamat" name="alamat" rows="3" required></textarea>
-        <button type="submit">Kirim Pendaftaran</button>
-        <div id="statusPendaftaran" class="status"></div>
-      </form>
-      <div class="section">
-        <h2>Donasi</h2>
-        <p>Dukung kegiatan Rumah Tahfidz kami dengan sedekah terbaik Anda:</p>
-        <ul>
-          <li><strong>Bank BCA</strong></li>
-          <li><strong>No. Rekening:</strong> 4460620231</li>
-          <li><strong>a.n:</strong> ATI HAYATI Bendahara: Rumah Tahfidz Al-Quran MULIA</li>
-        </ul>
-        <p>Semoga Allah Ta'ala membalas amal jariyah Anda dengan kebaikan yang berlipat ganda.</p>
-      </div>
-    </section>
-    <section id="Kontak">
-      <h2>Hubungi Kami</h2>
-      <p>
-        <a href="https://www.threads.com/@rumahtahfidzmulia?xmt=AQF0zOJt3SFwna5hz758DTuDgKUyFDilcsRax53QNa4wGOE"> Instagram</a><br> 
-        📧 Email: <a href="mailto:rt.mulia.sucinaraja@gmail.com">rt.mulia.sucinaraja@gmail.com</a><br>
-        📞 <a href="tel:+6283198287157">+62 831 9828 7157 - Ustadz Deni</a><br>
-        📞 <a href="tel:+6289695920826">+62 896 9592 0826 - Ibu Ati</a><br>
-        📍 Alamat: Jl. Raya Wanaraja, Kp Mudasari (koropeak) RT02-RW11, Ds Tegalpanjang, Kec Sucinaraja, Kab. Garut
-      </p>
-      <div class="contact-buttons">
-        <a href="https://wa.me/6283198287157" target="_blank">Hubungi Ustadz Deni via WhatsApp</a>
-        <a href="https://wa.me/6289695920826" target="_blank">Hubungi Ibu Ati via WhatsApp</a>
-        <a href="https://maps.app.goo.gl/85UyVQ9kFDQQfMrYA" target="_blank" class="maps-button">📍 Klik Disini untuk di Arahkan ke Rumah Tahfidz</a>
-      </div>
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.514436573719!2d107.971261!3d-7.291775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e652a6a6a6a6a6a%3A0x1a1a1a1a1a1a1a1a!2sRumah%20Tahfidz%20Al-Quran%20MULIA!5e0!3m2!1sen!2sid!4v1625072000000!5m2!1sen!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-  </main>
-  <footer>
-    © 2025 Sekolah Tahfidz Al-Quran MULIA Sucinaraja. Semua hak cipta dilindungi.
-  </footer>
-  <script>
-    const form = document.getElementById("formPendaftaran");
-    const status = document.getElementById("statusPendaftaran");
-
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      const data = new FormData(form);
-      fetch("https://script.google.com/macros/s/AKfycbwVxQhpYtmaQTaS1PD8YpZluBg1ZP8CRuZU3lZnTJwKDyCXJ-n59fvKHcGTjMdIzvW6zg/exec", {
-        method: "POST",
-        body: data
-      })
-      .then(response => {
-        if (response.ok) {
-          status.textContent = "✅ Pendaftaran berhasil dikirim.";
-          status.style.color = "green";
-          form.reset();
-        } else {
-          throw new Error("Gagal mengirim");
-        }
-      })
-      .catch(error => {
-        status.textContent = "❌ Gagal mengirim. Silakan coba lagi.";
-        status.style.color = "red";
-      });
-    });
-  </script>
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            fetch("https://script.google.com/macros/s/AKfycbwVxQhpYtmaQTaS1PD8YpZluBg1ZP8CRuZU3lZnTJwKDyCXJ-n59fvKHcGTjMdIzvW6zg/exec", {
+                method: "POST",
+                body: data
+            })
+            .then(response => {
+                if (response.ok) {
+                    status.textContent = "✅ Pendaftaran berhasil dikirim.";
+                    status.style.color = "green";
+                    form.reset();
+                } else {
+                    throw new Error("Gagal mengirim");
+                }
+            })
+            .catch(error => {
+                status.textContent = "❌ Gagal mengirim. Silakan coba lagi.";
+                status.style.color = "red";
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
