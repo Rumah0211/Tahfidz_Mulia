@@ -164,13 +164,13 @@
         }
         
         /* === CSS Untuk Tampilan Mobile === */
-        /* Ikon Menu Hamburger */
         .menu-icon {
             display: none;
             cursor: pointer;
             padding: 10px;
             position: absolute;
             right: 10%;
+            z-index: 20; /* Penting! Pastikan tombol ini selalu di atas menu */
         }
 
         .bar {
@@ -204,23 +204,22 @@
                 flex-direction: column;
                 align-items: flex-start;
                 width: 100%;
-                /* Mengubah posisi agar menu mengambang di atas konten */
-                position: fixed; /* Membuat menu tetap di posisi layar */
-                top: 0; /* Mulai dari bagian atas layar */
+                position: fixed;
+                top: 0;
                 left: 0;
-                height: 100vh; /* Menu akan menutupi seluruh layar */
-                background-color: rgba(27, 94, 32, 0.95); /* Warna dengan sedikit transparansi */
+                height: 100vh;
+                background-color: rgba(27, 94, 32, 0.95);
                 z-index: 10;
-                padding-top: 100px; /* Jarak dari atas untuk memberi ruang header */
+                padding-top: 100px;
             }
             
             nav a {
                 display: block;
-                padding: 15px 10%; /* Meningkatkan padding agar mudah diklik */
+                padding: 15px 10%;
                 width: 80%;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                font-size: 1.1rem; /* Ukuran font lebih kecil */
-                font-weight: 400; /* Font lebih tipis */
+                font-size: 1rem;
+                font-weight: 400;
             }
 
             nav a:last-child {
@@ -233,7 +232,7 @@
 
             .menu-icon {
                 display: block;
-                top: 10px; /* Mengatur ulang posisi ikon hamburger */
+                top: 10px;
             }
             
             .gallery-container {
@@ -397,10 +396,20 @@
     <script>
         const menuIcon = document.querySelector('.menu-icon');
         const nav = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('nav a'); /* Mendapatkan semua link di dalam nav */
 
+        // Event listener untuk tombol hamburger
         menuIcon.addEventListener('click', () => {
             nav.classList.toggle('nav-active');
             menuIcon.classList.toggle('open');
+        });
+
+        // Event listener untuk setiap link di dalam menu
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav-active');
+                menuIcon.classList.remove('open');
+            });
         });
 
         const form = document.getElementById("formPendaftaran");
