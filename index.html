@@ -69,22 +69,29 @@
       padding: 20px 10%;
     }
     .gallery-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-    .gallery-container img {
-      width: 220px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 2px solid #81c784;
-      box-shadow: 0 2px 8px #ccc;
-      transition: transform 0.3s;
-    }
-    .gallery-container img:hover {
-      transform: scale(1.05);
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px; /* Jarak antar item */
+  padding: 20px;
+}
+
+.image-item {
+  text-align: center;
+  border: 1px solid #ddd; /* Garis tepi */
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Ukuran kotak item */
+}
+
+.image-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block; /* Menghilangkan spasi di bawah gambar */
+  margin-bottom: 10px;
+}
     }
     form {
       max-width: 500px;
@@ -224,29 +231,33 @@
     </section>
     <section id="Galeri">
       <h2>Galeri Foto Kegiatan</h2>
-      <div class="gallery-container">
-        <div class="image-item">
-        <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Ruang%20Belajar.jpeg?raw=true" alt="Suasana kelas">
-          <p>Suasana Kelas</p>
-          </div>
-        <div class="image-item">
-          <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Kelas%20Memanah.jpeg?raw=true" alt="Kelas Memanah">
-          <p>Kelas Memanah</p>
-          </div>
-        <div class="image-item">
-          <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Setor%20Hafalan%20Putri.jpeg?raw=true" alt="Setoran Hafalan Putri">
-          <p>Setoran Hafalan Putri</p>
-          </div>
-        <div class="image-item">
-          <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Penghargaan.jpeg?raw=true" alt="Penghargaan Hafalan">
-        <div class="image-item">  
-          <p>Penghargaan Hafalan</p>
-          </div>
-        <div class="image-item">  
-        <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Setor%20Hafalan%20Putra.jpeg?raw=true" alt="Setoran Hafalan Putra">
-          <p>Setoran Hafalan Putra</p>
-      </div>
-     </div>
+
+<div class="gallery-container">
+  <div class="image-item">
+    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Ruang%20Belajar.jpeg?raw=true" alt="Suasana kelas">
+    <p>Suasana Kelas</p>
+  </div>
+  
+  <div class="image-item">
+    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Kelas%20Memanah.jpeg?raw=true" alt="Kelas Memanah">
+    <p>Kelas Memanah</p>
+  </div>
+  
+  <div class="image-item">
+    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Setor%20Hafalan%20Putri.jpeg?raw=true" alt="Setoran Hafalan Putri">
+    <p>Setoran Hafalan Putri</p>
+  </div>
+  
+  <div class="image-item">
+    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Penghargaan.jpeg?raw=true" alt="Penghargaan Hafalan">
+    <p>Penghargaan Hafalan</p>
+  </div>
+  
+  <div class="image-item">
+    <img src="https://github.com/Rumah0211/Tahfidz_Mulia/blob/main/Setor%20Hafalan%20Putra.jpeg?raw=true" alt="Setoran Hafalan Putra">
+    <p>Setoran Hafalan Putra</p>
+  </div>
+</div>
     </section>
     <section id="Fasilitas">
       <h2>Fasilitas</h2>
@@ -339,6 +350,7 @@
   </script>
 </body>
 </html>
+
 
 
 
